@@ -33,6 +33,13 @@ Route::prefix('admin')->group(function(){
     //RESORTS
     Route::get('/viewall/resorts',[ResortController::class,'ViewAllResorts'])->name('all.resorts');
     Route::get('/add/resort',[ResortController::class,'AddNewResort'])->name('add.resort');
+    Route::post('/store/resort',[ResortController::class,'StoreResort'])->name('resort.store');
+    Route::get('/inactive/{id}',[ResortController::class,'ResortInactive'])->name('resort.inactive');
+    Route::get('/active/{id}',[ResortController::class,'ResortActive'])->name('resort.active');
+    Route::get('/editresort/{id}',[ResortController::class,'EditResort'])->name('edit.resort');
+    Route::get('/deleteresort/{id}',[ResortController::class,'DeleteResort'])->name('delete.resort');
+    Route::post('/update/resort/{id}',[ResortController::class,'UpdateResort'])->name('update.resort');
+
 });
 
 

@@ -19,7 +19,7 @@ class CreateResortModelsTable extends Migration
             $table->string('resort_class');
             $table->string('resort_location');
             $table->integer('resort_fair');
-            $table->integer('resort_discount');
+            $table->integer('resort_discount')->nullable();
             $table->string('availability');
             $table->string('resort_image');
             $table->integer('status')->default(1);
