@@ -17,7 +17,8 @@ use App\Http\Controllers\ResortController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('Frontend.index');
 });
 
 //ADMIN
@@ -39,6 +40,9 @@ Route::prefix('admin')->group(function(){
     Route::get('/editresort/{id}',[ResortController::class,'EditResort'])->name('edit.resort');
     Route::get('/deleteresort/{id}',[ResortController::class,'DeleteResort'])->name('delete.resort');
     Route::post('/update/resort/{id}',[ResortController::class,'UpdateResort'])->name('update.resort');
+
+    Route::get('/search',[ResortController::class,'SearchResort'])->name('search');
+
 
 });
 

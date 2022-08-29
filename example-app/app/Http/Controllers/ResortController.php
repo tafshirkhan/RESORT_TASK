@@ -9,8 +9,18 @@ use Image;
 class ResortController extends Controller
 {
     public function ViewAllResorts(){
+        /*$search = $req['search'] ?? "";
+        if($search != ""){
+            $allresort = ResortModel::where('resort_name','LIKE',"%$search%")->orWhere('resort_class','LIKE',"%$search%")->get();
+
+        }else{
+            $allresort = ResortModel::latest()->get();
+
+        }*/
         $allresort = ResortModel::latest()->get();
         return view('Admin.ManageResort.allresorts',compact('allresort'));
+        //return view('Admin.ManageResort.allresorts',compact('allresort','search'));
+        
     }
 
     public function AddNewResort(){
@@ -129,5 +139,13 @@ class ResortController extends Controller
             'alert-type'=>'warning'
         );
         return redirect()->back()->with($notification);
+    }
+
+    public function SearchResort(){
+        $search = $_GET['search'];
+        $search_resort = ResortModel::where('resort_name','LIKE','%'.$search.'%')->get();
+        return view('Admin.ManageResort.allresorts',compact('search_resort'));
+
+
     }
 }

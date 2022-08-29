@@ -1,8 +1,7 @@
 @extends('Admin.admin_master')
 @section('admin')
     <!-- Data Tables-->
-
-    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <!--<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">-->
 
     <div class="container-full">
         <!-- Content Header (Page header) -->
@@ -23,8 +22,20 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">
-                            <table id="myTable1" class="table table-bordered table-striped">
+                            <form action="{{ route('search') }}" method="get">
+                                <div class="form-group">
+
+                                    <div class="controls">
+                                        <input type="search" name="search" class="form-control"
+                                            placeholder="Search by name">
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-sm">Search</button>
+                            </form>
+                            <br><br>
+                            <table id="table1" class="table table-bordered table-striped">
                                 <thead>
+
                                     <tr>
                                         <th>Name</th>
                                         <th>Class</th>
@@ -32,7 +43,6 @@
                                         <th>Fare</th>
                                         <th>Discount</th>
                                         <th>Availability</th>
-
                                         <th>Image</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -65,7 +75,7 @@
                                                     <span class="badge badge-warning">Inactive</span>
                                                 @endif
                                             </td>
-                                            <td>
+                                            <td width="25%">
                                                 <a href="{{ route('edit.resort', $resort->id) }}"
                                                     class="btn btn-info">Edit</a>
                                                 <a href="{{ route('delete.resort', $resort->id) }}" class="btn btn-danger"
@@ -109,14 +119,13 @@
     </div>
 
     <!-- Data Tables -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-
+                                                                                                                                                                        <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>-->
     <script>
         $(document).ready(function() {
-            $('#myTable1').DataTable();
+            $('#table1').DataTable();
         });
     </script>
 @endsection

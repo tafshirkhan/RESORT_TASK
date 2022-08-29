@@ -24,6 +24,13 @@
     <!-- sweet wlert-->
 
     <link rel="stylesheet" href="sweetalert2.min.css">
+    <!-- Data Tables-->
+    <!--<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">-->
+    <link href=" https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 
 
@@ -45,6 +52,9 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             @yield('admin')
+        </div>
+        <div class="content-wrapper">
+            @yield('script')
         </div>
         <!-- /.content-wrapper -->
         <!-- Footer-->
@@ -90,6 +100,13 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.min.js"></script>
 
+    <!-- Data Tables -->
+    <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>-->
+
+
     {{-- toastr --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -117,6 +134,7 @@
             }
         @endif
     </script>
+
 
 </body>
 

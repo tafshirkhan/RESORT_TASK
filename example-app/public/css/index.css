@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: 'Roboto Slab', serif;
+    scroll-behavior: smooth;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.head_container {
+    max-width: 90%;
+    margin: auto;
+}
+
+header {
+    height: 8vh;
+    background: rgb(1, 102, 11);
+}
+
+.logo img {
+    width: 120px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.hambuger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(5, 48, 109);
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    margin-left: 3rem;
+}
+
+header ul li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+header ul li a:hover {
+    color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+    header ul {
+            display: block;
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.5s;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            z-index: 20;
+        }
+    
+        header ul.active {
+            left: 0%;
+        }
+    
+        header ul li {
+            margin: 2.5rem 0;
+        }
+    
+        header ul li a {
+            color: black;
+        }
+    
+        .hambuger {
+            display: block;
+            cursor: pointer;
+        }
+    
+        .hambuger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .hambuger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+    
+        .hambuger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+}
+
+.home .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.home .text {
+    max-width: 50%;
+    color: white;
+    margin: 20% 0 0 10%;
+}
+
+.home h1 {
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.home p {
+    font-weight: 400;
+    line-height: 25px;
+    font-family: sans-serif;
+    font-size: 17px;
+    margin: 50px 0 0 50px;
+}
+
+button {
+    padding: 20px 40px;
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    margin-top: 20px;
+}
+
+.home button {
+    margin-left: 50px;
+}
+
+.home .image_item {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.home .btn_more{
+    background: red;
+}
+.home .image_item img {
+    width: 140px;
+    height: 94px;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.home .image_item img.active {
+    border: 2px solid white;
+}
+
+.home .box .text {
+    position: relative;
+}
+
+.home .box .text::after {
+    position: absolute;
+    content: 'H';
+    font-size: 500px;
+    top: -120%;
+    font-weight: bold;
+    opacity: 0.1;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.book {
+    margin-top: 5%;
+    width: 100%;
+    height: 8vh;
+    color: white;
+}
+
+.book .input {
+    background: rgb(1, 102, 11);
+    padding: 20px 20px 40px 20px;
+}
+
+.book .search {
+    background: rgb(7, 38, 1);
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    background: #ffffff;
+    margin-top: 20px;
+    color: rgb(1, 102, 11);
+}
+
+::placeholder {
+    color: rgb(1, 102, 11);
+}
+
+.book .search {
+    width: 20%;
+}
+
+.book .search input {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+
+.flex1 {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.room .grid {
+    margin-top: 5%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.room img {
+    width: 100%;
+    height: 100%;
+}
+
+.room .box {
+    box-shadow: 0 13px 43px 0 rgba(0, 1, 4, 0.1);
+}
+
+.room .text {
+    padding: 20px;
+}
+
+.room h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.room p span {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
+
+.room p {
+    font-size: 20px;
+}
