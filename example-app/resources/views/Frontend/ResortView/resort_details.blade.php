@@ -68,9 +68,9 @@
                                     <strong class="label">Availability :
                                         <div class="price-box">
                                             @if ($resort_details->status == 1)
-                                                <span class="badge badge-success">Available</span>
+                                                <span class="badge badge-success">Open</span>
                                             @else
-                                                <span class="badge badge-danger">Not Available</span>
+                                                <span class="badge badge-danger">Closed now</span>
                                             @endif
                                         </div>
                                     </strong>

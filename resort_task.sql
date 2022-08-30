@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2022 at 01:13 PM
+-- Generation Time: Aug 30, 2022 at 10:28 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -46,6 +46,36 @@ INSERT INTO `admins` (`id`, `name`, `email`, `password`, `created_at`, `updated_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `booking_processes`
+--
+
+CREATE TABLE `booking_processes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `resort_id` int(11) NOT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `guest` int(11) NOT NULL,
+  `room` int(11) NOT NULL,
+  `reservation` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `booking_processes`
+--
+
+INSERT INTO `booking_processes` (`id`, `resort_id`, `user_name`, `user_email`, `user_phone`, `guest`, `room`, `reservation`, `created_at`, `updated_at`) VALUES
+(1, 3, 'Tafshir Ahmed', 'tafshirahmed100@gmail.com', '01792288714', 4, 2, '2022-09-03', NULL, NULL),
+(2, 4, 'Tafshir', 'khantafshir1997@gmail.com', '01792288714', 6, 3, '2022-09-03', NULL, NULL),
+(3, 4, 'Ahmed', 'tafshirahmed100@gmail.com', '01627439075', 1, 1, '2022-10-06', NULL, NULL),
+(4, 4, 'Tanim', 'khantafshir1997@gmail.com', '012345678912', 3, 2, '2022-09-03', NULL, NULL),
+(5, 2, 'Tabrez Kahn', 'tabrez100@gmail.com', '01627439075', 6, 3, '2022-09-03', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `failed_jobs`
 --
 
@@ -82,7 +112,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2022_08_29_054645_create_admins_table', 1),
 (5, '2022_08_29_064737_create_new_admins_table', 2),
 (6, '2022_08_29_072700_create_resort_models_table', 3),
-(7, '2022_08_29_073508_create_resort_models_table', 4);
+(7, '2022_08_29_073508_create_resort_models_table', 4),
+(8, '2022_08_30_175132_create_booking_processes_table', 5);
 
 -- --------------------------------------------------------
 
@@ -143,8 +174,10 @@ CREATE TABLE `resort_models` (
 --
 
 INSERT INTO `resort_models` (`id`, `resort_name`, `resort_class`, `resort_location`, `resort_fair`, `resort_discount`, `availability`, `resort_image`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'Sarah Resort', 'Premium', 'Rajendrapur of Gazipur', 15000, 3000, '2022-12-29', 'upload/resort/1742490324803380.jpg', 0, NULL, '2022-08-29 05:11:01'),
-(3, 'Chuti Resort', 'First Class', 'Located in Joydebpur', 10000, NULL, '2022-11-29', 'upload/resort/1742493756295712.jpg', 1, NULL, NULL);
+(2, 'Sarah Resort', 'Premium', 'Rajendrapur of Gazipur', 15000, 3000, '2022-09-02', 'upload/resort/1742490324803380.jpg', 0, NULL, '2022-08-29 09:21:59'),
+(3, 'Chuti Resort', 'First Class', 'Located in Joydebpur', 10000, NULL, '2022-09-29', 'upload/resort/1742493756295712.jpg', 1, NULL, NULL),
+(4, 'Greentech Resort & Convention Centre', 'First Class', 'Gazipur', 10000, 100, '2022-11-29', 'upload/resort/1742517683257662.jpg', 1, NULL, '2022-08-29 11:32:40'),
+(5, 'hali\'s Amber Nivaas', 'Premium', 'Dhaka', 15000, NULL, '2022-09-07', 'upload/resort/1742517630250236.jpg', 0, NULL, '2022-08-29 11:59:24');
 
 -- --------------------------------------------------------
 
@@ -173,6 +206,12 @@ CREATE TABLE `users` (
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `admins_email_unique` (`email`);
+
+--
+-- Indexes for table `booking_processes`
+--
+ALTER TABLE `booking_processes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -224,6 +263,12 @@ ALTER TABLE `admins`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `booking_processes`
+--
+ALTER TABLE `booking_processes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -233,7 +278,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `new_admins`
@@ -245,7 +290,7 @@ ALTER TABLE `new_admins`
 -- AUTO_INCREMENT for table `resort_models`
 --
 ALTER TABLE `resort_models`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`

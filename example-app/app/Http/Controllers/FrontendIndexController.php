@@ -34,8 +34,8 @@ class FrontendIndexController extends Controller
 
     }
 
-    public function BookingProcess($id){
+    /*public function BookingProcess($id){
         $resort_id = ResortModel::findOrFail($id);
         return view('Frontend.Booking.bookingprocess',compact('resort_id'));
-    }
+    }*/
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResortController;
 use App\Http\Controllers\FrontendIndexController;
+use App\Http\Controllers\BookingController;
 
 
 /*
@@ -55,7 +56,10 @@ Route::get('/resort/view_details/{id}',[FrontendIndexController::class,'ResorttD
 ////FOR CHECKING THE DATE////
 Route::get('/checkdate',[FrontendIndexController::class,'CheckDate']);
 
-Route::get('/booking/process/{id}',[FrontendIndexController::class,'BookingProcess'])->name('booking_process');
+//Route::get('/booking/process/{id}',[FrontendIndexController::class,'BookingProcess'])->name('booking_process');
+Route::get('/booking/process/{id}',[BookingController::class,'BookingProcess'])->name('booking_process');
+
+Route::post('/add/booking',[BookingController::class,'AddBooking'])->name('add_booking');
 
 
 
