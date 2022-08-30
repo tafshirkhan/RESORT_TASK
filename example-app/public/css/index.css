@@ -17,6 +17,7 @@ a {
     text-decoration: none;
 }
 .container {
+   
     max-width: 80%;
     margin: auto;
 }
@@ -288,4 +289,132 @@ input {
 
 .room p {
     font-size: 20px;
+}
+
+
+.footer_start{
+    background-color: black;
+    opacity: 90%;
+    
+    margin-top: 50px;
+    padding: 20px;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+footer h3 {
+    color: green;
+    margin-bottom: 20px;
+}
+
+footer li {
+    color: white;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+footer li:hover {
+    color: #C1B086;
+    cursor: pointer;
+}
+
+/*--------------footer--------*/
+@media only screen and (max-width:768px) {
+    .home .box .text {
+        max-width: 100%;
+    }
+
+    .home .box .text::after,
+    .home .image_item {
+        display: none;
+    }
+
+    .restaurant .container,
+    .about .container,
+    .book .container {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .book {
+        margin-top: 10%;
+        height: auto;
+    }
+
+    .book .search {
+        width: 100%;
+    }
+
+    .book .search input {
+        margin-top: 0;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .wrapper .text {
+        width: 80%;
+    }
+
+    .room {
+        margin-bottom: 100px;
+    }
+
+    .room .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .restaurant .right {
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    footer .payment {
+        
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home .text {
+        margin: 10% 0 0 0;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .about p,
+    .home p {
+        margin: 50px 0 0 0;
+    }
+
+    .wrapper .text {
+        padding: 10px;
+        height: 600px;
+    }
+
+    .heading_top {
+        margin-top: 100px;
+    }
+
+    .heading_top button {
+        display: none;
+    }
+
+    .restaurant .flex {
+        flex-direction: column-reverse;
+    }
 }

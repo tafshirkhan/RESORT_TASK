@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResortController;
+use App\Http\Controllers\FrontendIndexController;
 
 
 /*
@@ -45,5 +46,7 @@ Route::prefix('admin')->group(function(){
 
 
 });
+
+Route::get('/',[FrontendIndexController::class,'ViewIndexPage']);
 
 
