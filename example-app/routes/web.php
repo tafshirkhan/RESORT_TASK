@@ -49,4 +49,15 @@ Route::prefix('admin')->group(function(){
 
 Route::get('/',[FrontendIndexController::class,'ViewIndexPage']);
 
+//Frontend Resort Details Page 
+Route::get('/resort/view_details/{id}',[FrontendIndexController::class,'ResorttDetails_info']);
+
+////FOR CHECKING THE DATE////
+Route::get('/checkdate',[FrontendIndexController::class,'CheckDate']);
+
+Route::get('/booking/process/{id}',[FrontendIndexController::class,'BookingProcess'])->name('booking_process');
+
+
+
+
 

@@ -50,7 +50,8 @@
                         </div>
                         <div class="text">
                             <h3>{{ $resort->resort_name }}</h3>
-                            <button class="btn btn-primary">View Details</button>
+                            <a href="{{ url('resort/view_details/' . $resort->id) }}"> <button class="btn btn-primary">View
+                                    Details</button></a>
                         </div>
                     </div>
                 @endforeach

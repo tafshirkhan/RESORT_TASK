@@ -1,8 +1,6 @@
  <header class="header" id="navigation-menu">
      <div class="container">
          <nav>
-             <a href="#" class="logo"> <img src="" alt=""> RESORT</a>
-
              <ul class="nav-menu">
                  <li> <a href="#home" class="nav-link">Home</a> </li>
                  <li> <a href="#about" class="nav-link">About</a> </li>
