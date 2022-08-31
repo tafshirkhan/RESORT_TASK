@@ -52,6 +52,7 @@
                                 </tbody>
 
                             </table>
+                            {{ $alladmins->links() }}
                         </div>
                     </div>
                     <!-- /.box-body -->

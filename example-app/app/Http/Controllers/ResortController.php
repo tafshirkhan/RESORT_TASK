@@ -17,7 +17,9 @@ class ResortController extends Controller
             $allresort = ResortModel::latest()->get();
 
         }*/
-        $allresort = ResortModel::latest()->get();
+        //$allresort = ResortModel::latest()->get();
+         $allresort = ResortModel::paginate(3);
+
         return view('Admin.ManageResort.allresorts',compact('allresort'));
         //return view('Admin.ManageResort.allresorts',compact('allresort','search'));
         

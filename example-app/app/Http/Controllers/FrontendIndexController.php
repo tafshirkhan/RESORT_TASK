@@ -10,7 +10,7 @@ class FrontendIndexController extends Controller
 {
     public function ViewIndexPage(){
         $allresort = ResortModel::orderBy('resort_name','ASC')->get();
-
+    
         return view('Frontend.index',compact('allresort'));
 
     }

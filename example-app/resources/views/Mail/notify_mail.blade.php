@@ -85,12 +85,13 @@
                                                                             style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; position: relative;">
 
                                                                         </td>
-                                                                        <td>Username: {{ $booking['user_name'] }}</td>
+                                                                        <td>Request By: {{ $notify['user_name'] }}</td>
                                                                         <br>
-                                                                        <td>Phone: {{ $booking['user_phone'] }}</td>
+                                                                        <td>Customer Phone: {{ $notify['user_phone'] }}
+                                                                        </td>
                                                                         <br>
-                                                                        <td>Reservation Date:
-                                                                            {{ $booking['reservation'] }}</td>
+                                                                        <td>Reservation Request Date:
+                                                                            {{ $notify['reservation'] }}</td>
                                                                     </tr>
 
 

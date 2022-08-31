@@ -34,7 +34,8 @@ class AdminController extends Controller
     }
 
     public function ViewAllAdmins(){
-        $alladmins = NewAdmin::latest()->get();
+        //$alladmins = NewAdmin::latest()->get();
+        $alladmins = NewAdmin::paginate(3);
         return view('Admin.ManageAdmin.alladmins',compact('alladmins'));
     }
 

@@ -8,6 +8,9 @@ use App\Models\BookingProcess;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BookingProcessMail;
+use App\Mail\NotifyAdmiMail;
+use App\Models\Admin;
+
 
 class BookingController extends Controller
 {
@@ -18,6 +21,9 @@ class BookingController extends Controller
 
     public function AddBooking(Request $req){
         $resort_id = $req->id;
+
+        $admin = Admin::find(1);
+        
 
         //$availability = ResortModel::findOrFail($resort_id)->where('availability','>=',Carbon::now()->format('Y-m-d'))->first();
         
@@ -47,7 +53,15 @@ class BookingController extends Controller
                 'user_phone'=>$req->user_phone,
                 'reservation'=>$req->reservation,
             ];
+
+            $data1 =[
+                'user_name'=>$req->user_name,
+                'user_phone'=>$req->user_phone,
+                'reservation'=>$req->reservation,
+            ];
             Mail::to($req->user_email)->send(new BookingProcessMail($data));
+
+            Mail::to($admin->email)->send(new NotifyAdmiMail($data1));
 
             $notification = array(
                 'message'=>'Reseravation request has been sent successfully',

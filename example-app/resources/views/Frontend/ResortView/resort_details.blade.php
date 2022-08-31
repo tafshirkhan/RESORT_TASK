@@ -93,9 +93,10 @@
                     <div class="quantity-container info-container">
                         <div class="row">
                             <div class="col-sm-7">
-                                <a href="{{ route('booking_process', $resort_details->id) }}" class="btn btn-primary"><i
-                                        class="fa fa-shopping-cart inner-right-vs"></i>
+                                <a type="submit" href="{{ route('booking_process', $resort_details->id) }}"
+                                    class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i>
                                     Click here for booking procedure</a>
+
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2022 at 10:28 PM
+-- Generation Time: Aug 31, 2022 at 06:24 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -71,7 +71,10 @@ INSERT INTO `booking_processes` (`id`, `resort_id`, `user_name`, `user_email`, `
 (2, 4, 'Tafshir', 'khantafshir1997@gmail.com', '01792288714', 6, 3, '2022-09-03', NULL, NULL),
 (3, 4, 'Ahmed', 'tafshirahmed100@gmail.com', '01627439075', 1, 1, '2022-10-06', NULL, NULL),
 (4, 4, 'Tanim', 'khantafshir1997@gmail.com', '012345678912', 3, 2, '2022-09-03', NULL, NULL),
-(5, 2, 'Tabrez Kahn', 'tabrez100@gmail.com', '01627439075', 6, 3, '2022-09-03', NULL, NULL);
+(5, 2, 'Tabrez Kahn', 'tabrez100@gmail.com', '01627439075', 6, 3, '2022-09-03', NULL, NULL),
+(6, 2, 'Rahat', 'rahat100@gmail.com', '012345671234', 8, 4, '2022-10-08', NULL, NULL),
+(7, 4, 'Kamal Uddin Rahat', 'kamalrahat100@gmail.com', '022222222222', 5, 2, '2022-09-07', NULL, NULL),
+(8, 4, 'Kamal Uddin Rahat', 'kamalrahat100@gmail.com', '022222222222', 5, 2, '2022-09-10', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -177,7 +180,8 @@ INSERT INTO `resort_models` (`id`, `resort_name`, `resort_class`, `resort_locati
 (2, 'Sarah Resort', 'Premium', 'Rajendrapur of Gazipur', 15000, 3000, '2022-09-02', 'upload/resort/1742490324803380.jpg', 0, NULL, '2022-08-29 09:21:59'),
 (3, 'Chuti Resort', 'First Class', 'Located in Joydebpur', 10000, NULL, '2022-09-29', 'upload/resort/1742493756295712.jpg', 1, NULL, NULL),
 (4, 'Greentech Resort & Convention Centre', 'First Class', 'Gazipur', 10000, 100, '2022-11-29', 'upload/resort/1742517683257662.jpg', 1, NULL, '2022-08-29 11:32:40'),
-(5, 'hali\'s Amber Nivaas', 'Premium', 'Dhaka', 15000, NULL, '2022-09-07', 'upload/resort/1742517630250236.jpg', 0, NULL, '2022-08-29 11:59:24');
+(5, 'Hali\'s Amber Nivaas', 'Premium', 'Dhaka', 15000, NULL, '2022-09-07', 'upload/resort/1742517630250236.jpg', 0, NULL, '2022-08-30 22:03:05'),
+(6, 'Dhaka Resort', 'Business Class', 'Dhaka', 12000, 2000, '2022-09-09', 'upload/resort/1742647662833922.jpg', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -266,7 +270,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `booking_processes`
 --
 ALTER TABLE `booking_processes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -290,7 +294,7 @@ ALTER TABLE `new_admins`
 -- AUTO_INCREMENT for table `resort_models`
 --
 ALTER TABLE `resort_models`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`

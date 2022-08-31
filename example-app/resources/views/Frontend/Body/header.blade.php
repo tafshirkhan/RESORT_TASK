@@ -2,7 +2,7 @@
      <div class="container">
          <nav>
              <ul class="nav-menu">
-                 <li> <a href="#home" class="nav-link">Home</a> </li>
+                 <li> <a href="{{ url('/') }}" class="nav-link">Home</a> </li>
                  <li> <a href="#about" class="nav-link">About</a> </li>
                  <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
                  <li> <a href="#contact" class="nav-link">Contact</a> </li>

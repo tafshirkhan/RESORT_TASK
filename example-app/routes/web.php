@@ -18,8 +18,12 @@ use App\Http\Controllers\BookingController;
 |
 */
 
+/*Route::get('admin/login', function () {
+    return view('welcome');
+    //return view('Frontend.index');
+});*/
+
 Route::get('/', function () {
-    //return view('welcome');
     return view('Frontend.index');
 });
 
